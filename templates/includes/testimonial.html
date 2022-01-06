@@ -1,0 +1,34 @@
+{% load static %}
+<div data-aos="fade-left" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" class="rn-testimonial-area testimonial-style-2 section-height">
+    <div class="inner">
+        <h5 class="title">
+            Testimonial
+        </h5>
+
+        <!-- carousel area Start -->
+        <div class="rn-testimonial-carousel testimonial-item-one rn-slick-dot-style dot-position-left slick-arrow-style-one arrow-top-align">
+
+            <!-- Start Single Testimonial  -->
+            {%for i in test %}
+            <div class="testimonial-inner">
+                <div class="testimonial-header">
+                    <div class="thumbnail">
+                        <img src="{{i.image.url}}" alt="{{i.image_name}}">
+                    </div>
+                    <h5 class="ts-header">
+                        <span class="text-color-primary">@{{i.fullname}}</span> {{i.designation}}
+                    </h5>
+                </div>
+                <div class="testimonial-body">
+                    <p class="discription">{{i.quote}} 💨.</p>
+                </div>
+            </div>
+            {%endfor%}
+            <!-- End Single Testimonial  -->
+
+
+
+        </div>
+        <!-- carousel area End -->
+    </div>
+</div>
